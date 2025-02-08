@@ -51,3 +51,8 @@ Get-AppxPackage -allusers Microsoft.WindowsCamera | Foreach {Add-AppxPackage -Di
 ```
 npx rimraf ./**/node_modules
 ```
+
+## Remove Node Modules folder from all folders through cmd
+```
+for /d /r . %d in (node_modules) do @if exist "%d" rd /s /q "%d"
+```
